@@ -1,0 +1,93 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: #000 url(./img/mike-aunzo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: hard-light;
+}
+
+.counter-wrap {
+    position: absolute;
+    top: 100px;
+    right: 120px;
+    bottom: 100px;
+    left: 120px;
+    background: #eeeeee;
+    background: url('./img/mike-aunzo.jpg');
+    background-size: cover;
+    /* background-position: right; */
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 40px 40px rgba(255, 255, 255, 0.5), 0 0 0 120px rgba(255, 255, 255, 0.1);
+}
+
+.counter-wrap h2 {
+    text-align: center;
+    font-size: 7em;
+    line-height: 0.5em;
+    color: #eeeeee;
+    margin-top: -100px;
+}
+
+.counter-wrap h2 span {
+    display: block;
+    font-weight: 300;
+    letter-spacing: 5px;
+    font-size: 0.2em;
+}
+
+.countdown {
+    display: flex;
+    margin-top: 50px;
+}
+
+.countdown div {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background: #333;
+    color: #eeeeee;
+    margin: 0 15px;
+    font-size: 3em;
+    font-weight: 500;
+}
+
+.countdown div::before {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    color: #333;
+    background: #eeeeee;
+    font-size: 0.33em;
+    line-height: 35px;
+    font-weight: 300;
+}
+
+.countdown #day::before {
+    content: 'Días';
+}
+
+.countdown #hour::before {
+    content: 'Horas';
+}
+
+.countdown #minute::before {
+    content: 'Minutos';
+}
+
+.countdown #second::before {
+    content: 'Segundos';
+}
